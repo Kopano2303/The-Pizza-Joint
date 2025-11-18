@@ -529,7 +529,13 @@ section nav.icon i{
 #lightboximage {
       width: 60%;
  }
-
+#dateTime {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    
+}
 
 
 

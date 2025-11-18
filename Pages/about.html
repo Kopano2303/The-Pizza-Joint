@@ -53,8 +53,6 @@
         </ul>
     </nav>
     
-    <script src="script.js"></script>
-
     
 <!-- Header section containing logo and navigation links -->
     <header>
@@ -91,6 +89,7 @@
             <div class="about_header">
             <h1 class="about">About <br> Us </h1>
             <h1 class="about_who">Who are <br> We ?</h1>
+              
         </div>
         
         <div class="about_us">
@@ -159,7 +158,7 @@
         <script>
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightboxImage");
-        document.querySelectorAll(".thumbnail").forEach(img => {
+        document.querySelectorAll(".staff-img").forEach(img => {
             img.addEventListener("click", () => {
             lightboxImg.src = img.src.replace("100", "600");
             lightbox.style.display = "flex";
@@ -203,20 +202,10 @@
      <!-- Footer section -->
     <footer>
         <p style="color: white;"> &copy;2025 The pizza joint</p>
-        <script>
-             //DATE STAMP
-            function displayDate() {
-            const today = new Date();
-
-            const dateStr = today.toDateString(); // e.g., 'Fri Oct 11 2024'
-
-            document.getElementById("date").innerHTML = `Today's Date: ${dateStr}`;
-        }
-
-            displayDate();
-        </script>
-        
-    </footer>
-
+          <p id="dateTime"></p>
+    
+    </footer>      
+    <!-- Link to external JS file -->
+<script src="script.js"></script>
 </body>
 </html>
