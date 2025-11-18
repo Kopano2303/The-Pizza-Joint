@@ -157,16 +157,16 @@
         <div id="lightbox"><img id="lightboxImage" src=""></div>
 
         <script>
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImage");
-document.querySelectorAll(".thumbnail").forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src.replace("100", "600");
-    lightbox.style.display = "flex";
-  });
-});
-lightbox.addEventListener("click", () => lightbox.style.display = "none");
-</script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImage");
+        document.querySelectorAll(".thumbnail").forEach(img => {
+            img.addEventListener("click", () => {
+            lightboxImg.src = img.src.replace("100", "600");
+            lightbox.style.display = "flex";
+        });
+        });
+        lightbox.addEventListener("click", () => lightbox.style.display = "none");
+        </script>
 
 
          <!-- History section -->
@@ -203,6 +203,20 @@ lightbox.addEventListener("click", () => lightbox.style.display = "none");
      <!-- Footer section -->
     <footer>
         <p style="color: white;"> &copy;2025 The pizza joint</p>
+        <script>
+             //DATE STAMP
+            function displayDate() {
+            const today = new Date();
+
+            const dateStr = today.toDateString(); // e.g., 'Fri Oct 11 2024'
+
+            document.getElementById("date").innerHTML = `Today's Date: ${dateStr}`;
+        }
+
+            displayDate();
+        </script>
+        
     </footer>
+
 </body>
 </html>

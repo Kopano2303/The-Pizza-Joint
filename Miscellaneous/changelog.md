@@ -14,3 +14,6 @@ v1.1.0 – Latest Update
     Added mobile responsiveness
     Integrated Font Awesome icons
     Added responsive CSS styling
+
+v1.2.0
+lightbox on about page and css
