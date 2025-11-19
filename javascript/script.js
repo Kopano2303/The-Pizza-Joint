@@ -68,3 +68,87 @@ document.querySelectorAll(".accordion-header").forEach(button => {
         }
     });
 });
+
+
+
+
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        
+        // Remove active highlight from buttons
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const tabName = button.getAttribute("data-tab");
+
+        // Show matching tab content only
+        tabContents.forEach(content => {
+            content.style.display = content.id === `tab-${tabName}` ? "block" : "none";
+        });
+    });
+});
+
+
+
+
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+
+    // Clear old errors
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+
+    let valid = true;
+
+    // Validate name
+    if (name === "") {
+        nameError.textContent = "Name cannot be empty";
+        valid = false;
+    }
+
+    // Validate email must match EXACTLY email@gmail.com
+    if (email === "") {
+        emailError.textContent = "Email cannot be empty";
+        valid = false;
+    } (!email.endsWith("@gmail.com")) 
+    {
+        alert("Email must contain @gmail.com");
+        valid = false;
+    }
+
+    // Validate message
+    if (message === "") {
+        messageError.textContent = "Message cannot be empty";
+        valid = false;
+    }
+
+    if (!valid) return;
+
+    // Open Gmail compose with YOUR required email as the receiver
+    const gmailUrl =
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + "email@gmail.com" +
+        "&su=" + encodeURIComponent("Message from Contact Form") +
+        "&body=" + encodeURIComponent(
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n\n" +
+            "Message:\n" + message
+        );
+
+    window.open(gmailUrl, "_blank");
+});

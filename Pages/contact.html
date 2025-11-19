@@ -126,15 +126,18 @@
                         <h2>Talk To Us:</h2>
                         <tr>
                             <td width="100px">Name :</td>
-                            <td><input type="text" name="Name " placeholder="Enter your Name :"> </td>
+                            <td><input type="text" name="Name " placeholder="Enter your Name :" required> </td>
+                            <small class="error" id="nameError"></small>
                         </tr>
                         <tr>
                             <td width="100px">Email :</td>
-                            <td><input type="email" name="email" placeholder="Enter your Email :"></td>
+                            <td><input type="email" name="email" placeholder="Enter your Email :" required></td>
+                            <small class="error" id="emailError"></small>
                         </tr>
                         <tr>
                             <td width="100px">Message Us :</td>
                             <td> <textarea rows="5"cols="25" required></textarea> </td>
+                            <small class="error" id="MessageError"></small>
                         </tr>
                         <tr>
                             <td width="100px"></td>

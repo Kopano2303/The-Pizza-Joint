@@ -27,14 +27,15 @@
 </head>
 
 <body class="menu-page">
-    <nav class="sidebar">
+    
+     <nav class="sidebar">
         <ul>
             <li class="active">
                 <a href="/index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-160v-375l-72 55-47-63 439-337 440 336-48 64-392-300-240 184v356h160v80H160Zm540 95q-42 29-92.5 24.5T521-81q-36-36-40.5-86.5T505-260q-29-42-24.5-92.5T521-439q36-36 86.5-40.5T700-455q42-29 92.5-24.5T879-439q36 36 40.5 86.5T895-260q29 42 24.5 92.5T879-81q-36 36-86.5 40.5T700-65Zm0-98 46 32q18 13 39 11t37-18q16-16 18-37t-11-39l-32-46 32-46q13-18 11-39t-18-37q-16-16-37-18t-39 11l-46 32-46-32q-18-13-39-11t-37 18q-16 16-18 37t11 39l32 46-32 46q-13 18-11 39t18 37q16 16 37 18t39-11l46-32Zm0-47q21 0 35.5-14.5T750-260q0-21-14.5-35.5T700-310q-21 0-35.5 14.5T650-260q0 21 14.5 35.5T700-210ZM480-470Zm220 210Z"/></svg>
                 <span>Home</span>
-              </a>
-              </li>
+                </a>
+            </li>
             
 
             <li>
@@ -43,7 +44,7 @@
                 <span>About</span>
                 </a>
             </li>
-           
+            
 
             <li>
                 <a href="/Pages/contact.html">
@@ -51,7 +52,7 @@
                 <span>Contact Us</span>
                 </a>
             </li>
-        
+            
 
             <li>
                 <a href="/Pages/menu.html">
@@ -59,7 +60,7 @@
                 <span>Menu</span>
                 </a>
             </li>
-            
+           
 
             <li>
                 <a href="/Pages/ordernow.html">
@@ -70,6 +71,7 @@
             
         </ul>
     </nav>
+    
     
     <script src="script.js"></script>    
 <!-- Header section containing logo and navigation links -->
@@ -98,70 +100,94 @@
     <!-- Main content area -->
     <main>
        <section class="hero_menuimg">
-        
+        <video autoplay loop muted playsinline class="background-clip" src="/Assets/PizzaMenu Animation.mp4" ></video>
        </section>
+       
+       <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="classic">Classic Pizzas</button>
+        <button class="tab-btn" data-tab="special">Special Pizzas</button>
+        <button class="tab-btn" data-tab="veg">Vegetarian Pizzas</button>
+       </div>
 
-        <section>
-            <h2>Classic Pizzas</h2>
-            <ul>
-              <li>
-                <h3>Margarita</h3>
-                <p>Medium R60 / Large R80</p>
-                <p>Tomato Sauce, Formagio, Oregano</p>
-              </li>
-              <li>
-                <h3>Vegetarian</h3>
-                <p>Medium R80 / Large R100</p>
-                <p>Tangy Sauce, Formagio, Mixed Veggies, Oregano</p>
-              </li>
-              <li>
-                <h3>Hawaiian</h3>
-                <p>Medium R90 / Large R110</p>
-                <p>Tangy Sauce, Formagio, Ham, Pineapple</p>
-              </li>
-              <li>
-                <h3>Tropical</h3>
-                <p>Medium R90 / Large R110</p>
-                <p>Trinchato Sauce, Formagio, Cheese, Bacon, Avo, Banana</p>
-              </li>
-              <li>
-                <h3>Pork Roulette</h3>
-                <p>Medium R100 / Large R120</p>
-                <p>Trinchato Sauce, Formagio, Cheese, Bacon, Russians, Garlic, Onions</p>
-              </li>
-            </ul>
-          </section>
-      
-          <section>
-            <h2>Special Pizzas</h2>
-            <ul>
-              <li>
-                <h3>Chicken Mayo</h3>
-                <p>Medium R100 / Large R120</p>
-                <p>Peri Nays Sauce, Formagio, Chicken Fillets, Mayo, Peppadew, Mush</p>
-              </li>
-              <li>
-                <h3>Mexican</h3>
-                <p>Medium R100 / Large R120</p>
-                <p>Beef Mince, Mozz, Mixed Peppers, Onions, Chillies, Garlic</p>
-              </li>
-              <li>
-                <h3>Meat Lover</h3>
-                <p>Medium R110 / Large R120</p>
-                <p>Napolitana Sauce, Formagio, Beef Sausages, Russians, Mixed Veg</p>
-              </li>
-              <li>
-                <h3>Supreme Pizza</h3>
-                <p>Medium R120 / Large R140</p>
-                <p>Napolitana Sauce, Formagio, Beef Sausage, Bacon, Russians, Onions, Garlic, Chillies</p>
-              </li>
-              <li>
-                <h3>Meaty Deluxe</h3>
-                <p>Medium R130 / Large R150</p>
-                <p>Formagio, Russians, Beef Sausage, Chicken, Bacon, Mixed Veg, Avo</p>
-              </li>
-            </ul>
-          </section>
+       <!-- ================= CLASSIC PIZZAS ================= -->
+<div id="tab-classic" class="tab-content" style="display: block;">
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/PepperoniPizza.jpg" alt="">
+        <h3>Pepperoni Pizza</h3>
+        <p>Our special pepperoni pizza served to you</p>
+        <p class="price">R89.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/MargheritaPizza.jpeg" alt="">
+        <h3>Margherita Pizza</h3>
+        <p>Cheese, basil & classic Italian flavor</p>
+        <p class="price">R79.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/HawaiianPizza.jpg" alt="">
+        <h3>Hawaiian Pizza</h3>
+        <p>Ham & pineapple goodness</p>
+        <p class="price">R92.99</p>
+    </div>
+
+</div>
+
+
+<!-- ================= SPECIAL PIZZAS ================= -->
+<div id="tab-special" class="tab-content">
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/BBQ Chicken Pizza.jpeg" alt="">
+        <h3>BBQ Chicken Pizza</h3>
+        <p>BBQ sauce, grilled chicken & peppers</p>
+        <p class="price">R109.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/MeatFeast.jpeg" alt="">
+        <h3>Meat Feast Pizza</h3>
+        <p>Beef, bacon, ham & sausage</p>
+        <p class="price">R119.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/ChickenMayo.jpeg" alt="">
+        <h3>Chicken Mayo Pizza</h3>
+        <p>Creamy mayo sauce mixed with shredded chicken</p>
+        <p class="price">R104.99</p>
+    </div>
+
+</div>
+
+
+<!-- ================= VEGETARIAN PIZZAS ================= -->
+<div id="tab-veg" class="tab-content">
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/VeggiePizza.jpeg" alt="">
+        <h3>Veggie Supreme</h3>
+        <p>Peppers, onion, olives, tomatoes, mushrooms</p>
+        <p class="price">R89.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/CheeseDeluxe.jpeg" alt="">
+        <h3>Cheese Deluxe</h3>
+        <p>Loaded with mozzarella, cheddar & parmesan</p>
+        <p class="price">R94.99</p>
+    </div>
+
+    <div class="menu">
+        <img class="menu_img" src="/Assets/SpinachFeta.jpg" alt="">
+        <h3>Spinach & Feta Pizza</h3>
+        <p>Fresh spinach topped with creamy feta</p>
+        <p class="price">R99.99</p>
+    </div>
+
+</div>
    
 </main>
 

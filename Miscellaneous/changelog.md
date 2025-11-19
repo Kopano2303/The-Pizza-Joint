@@ -17,5 +17,7 @@ v1.1.0 – Latest Update
 
 v1.2.0
 lightbox on about page and css
-added real-time content
+added real-time content on footer
 Meta tags on index, about, contact, menu, ordernow
+accordions on about page
+tabs on Menu Page
