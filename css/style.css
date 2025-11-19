@@ -770,6 +770,59 @@ footer.color p {
 
 
 
+
+
+
+
+
+
+
+/* Accordion container */
+.accordion {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Accordion title button */
+.accordion-header {
+    background-color: #621c0a;   
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.accordion-header:hover {
+    background-color: #cc2f3a;
+}
+
+/* Accordion content (hidden by default) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #fff;
+    border-left: 3px solid #621c0a;
+    padding: 0 15px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Paragraph spacing inside */
+.accordion-content p {
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
   
 
 

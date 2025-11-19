@@ -46,3 +46,25 @@ setInterval(updateDateTime, 1000);
 
 // Run immediately
 updateDateTime();
+
+
+
+document.querySelectorAll(".accordion-header").forEach(button => {
+    button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+
+        // Close other accordions (optional)
+        document.querySelectorAll(".accordion-content").forEach(section => {
+            if (section !== content) {
+                section.style.maxHeight = null;
+            }
+        });
+
+        // Toggle this accordion
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
