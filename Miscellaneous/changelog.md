@@ -17,3 +17,5 @@ v1.1.0 – Latest Update
 
 v1.2.0
 lightbox on about page and css
+added real-time content
+Meta tags on index, about, contact, menu, ordernow
