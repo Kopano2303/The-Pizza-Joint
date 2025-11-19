@@ -97,58 +97,110 @@ tabButtons.forEach(button => {
 
 
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+const form = document.getElementById("contactForm");
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+if (form) {
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    const nameError = document.getElementById("nameError");
-    const emailError = document.getElementById("emailError");
-    const messageError = document.getElementById("messageError");
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    // Clear old errors
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
 
-    let valid = true;
+        // Clear old errors
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
 
-    // Validate name
-    if (name === "") {
-        nameError.textContent = "Name cannot be empty";
-        valid = false;
+        let valid = true;
+
+        // Validate name
+        if (name === "") {
+            nameError.textContent = "Name cannot be empty";
+            valid = false;
+        }
+
+        // Validate email
+        if (email === "") {
+            emailError.textContent = "Email cannot be empty";
+            valid = false;
+        } 
+        else if (!email.endsWith("@gmail.com")) {
+            alert("Email must contain @gmail.com");
+            valid = false;
+        }
+
+        // Validate message
+        if (message === "") {
+            messageError.textContent = "Message cannot be empty";
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        // Open Gmail compose
+        const gmailUrl =
+            "https://mail.google.com/mail/?view=cm&fs=1" +
+            "&to=" + "email@gmail.com" +
+            "&su=" + encodeURIComponent("Message from Contact Form") +
+            "&body=" + encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n\n" +
+                "Message:\n" + message
+            );
+
+        window.open(gmailUrl, "_blank");
+    });
+}
+
+
+
+
+
+
+
+
+function removeHighlights(parentElement) {
+    const highlightedElements = parentElement.querySelectorAll(".highlight");
+
+    highlightedElements.forEach(element => {
+        element.classList.remove("highlight");
+    });
+}
+
+// Define the highlight function
+function highlight(parentElement, text) {
+    const elements = parentElement.querySelectorAll("p, span, div, a, li");
+
+    elements.forEach(element => {
+        if (element.textContent.toLowerCase().includes(text)) {
+            element.classList.add("highlight");
+        }
+    });
+}
+
+// Search input event listener
+window.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("siteSearch");
+
+    if (!searchInput) {
+        console.log("Search input NOT FOUND on page");
+        return;
     }
 
-    // Validate email must match EXACTLY email@gmail.com
-    if (email === "") {
-        emailError.textContent = "Email cannot be empty";
-        valid = false;
-    } (!email.endsWith("@gmail.com")) 
-    {
-        alert("Email must contain @gmail.com");
-        valid = false;
-    }
+    console.log("Search input detected!");
 
-    // Validate message
-    if (message === "") {
-        messageError.textContent = "Message cannot be empty";
-        valid = false;
-    }
+    searchInput.addEventListener("keyup", function () {
+        let text = this.value.toLowerCase();
 
-    if (!valid) return;
+        removeHighlights(document.body); // Remove existing highlights
 
-    // Open Gmail compose with YOUR required email as the receiver
-    const gmailUrl =
-        "https://mail.google.com/mail/?view=cm&fs=1" +
-        "&to=" + "email@gmail.com" +
-        "&su=" + encodeURIComponent("Message from Contact Form") +
-        "&body=" + encodeURIComponent(
-            "Name: " + name + "\n" +
-            "Email: " + email + "\n\n" +
-            "Message:\n" + message
-        );
-
-    window.open(gmailUrl, "_blank");
+        if (text.trim() !== "") {
+            highlight(document.body, text); // Add new highlights
+        }
+    });
 });
