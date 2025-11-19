@@ -1,10 +1,12 @@
-This is a pizza website that contains HTML and CSS.
-It has basic web structure, and styling.
+This is a pizza website that contains HTML, CSS and Javascript.
+The pizza joint has web structure, styling and responsivness
 
 Features :
 Works on desktop and mobile phone
 It has Home,About,Contact,Menu,Order Now pages.
-Basic CSS styling
+CSS styling
+Javascript for response
+
 
 File and folder structure :
 The Pizza joint/
@@ -36,5 +38,11 @@ The Pizza joint/
     W3Schools. (2025, September 12). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
 
     Schools, W. (2025, September 16). W3 SCHOOLS. Retrieved from W3 SCHOOLS: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+
+    Sir Jiks. BlueWave(2025, November 15)
+
+    YouTube(2025, November 15)
+
+    pexels(2025, November 18) Retrieved from : https://www.pexels.com/search/videos/pizza/
 
 
