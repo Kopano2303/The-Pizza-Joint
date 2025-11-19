@@ -14,7 +14,7 @@ Improved overall responsive CSS styling for better performance on various screen
 
 v1.2.0 – Latest Update
 Lightbox functionality added on the About Us page for better image viewing.
-Integrated real-time content display in the footer (e.g., current date and time).
+Integrated real-time content display in the footer (current date and time).
 Added Meta tags for SEO optimization across index, about, contact, menu, and ordernow pages.
 Implemented accordions on the About Us page for collapsible content.
 Added tabs functionality to the Menu page for better navigation of different menu sections.
